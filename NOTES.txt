@@ -1,0 +1,19 @@
+Instalar librerias
+--SDK de Azure Storage
+npm install @azure/core-http
+
+--MSAL Browser (Gestionar la libreria para token de authentication)
+npm install @azure/msal-browser
+
+--Storage Blob (Para gestionar contenedores de archivos blob dentro de nuestro proyecto)
+npm install @azure/storage-blob
+
+--Gestor de Mensajeria
+--Para la comunicacion con el mismo necesita Azure colas de mensajeria y en lugar de llamar a una API vamos a enviar mensajes a una cola
+--Necesitamos instalar un gestor de mensajeria para enviar mensajes a Azure ya que no lo hacemos a traves de API
+npm install tiny-emitter
+
+--Luego vamos hacer una disposicion de las configuraciones que vamos a necesitar y esas las tenemos siempre por defecto en el main.ts
+
+
+--Servicio que se encargara de realizar la conexion
