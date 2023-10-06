@@ -5,7 +5,8 @@ import Emitter from 'tiny-emitter'
 
 const app = createApp(App)
 
-app.config.globalProperties.$msalInstance = {}
-app.config.globalProperties.$emitter = new Emitter.TinyEmitter()
+app.config.globalProperties.$msalInstance = {};
+app.config.globalProperties.$emitter = new Emitter.TinyEmitter();
+
 
 app.use(router).mount('#app')

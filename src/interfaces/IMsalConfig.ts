@@ -4,7 +4,6 @@ interface IMsalConfig {
     auth: IAuth,
     cache: {
         cacheLocation: string
-
     }
 
 }
