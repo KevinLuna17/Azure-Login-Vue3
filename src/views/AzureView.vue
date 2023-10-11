@@ -15,15 +15,15 @@
                 account: ''
             }
         },
-        mounted () {
+        async created () {
             const azureService = new AzureService()
             this.$msalInstance = new PublicClientApplication(azureService.getMsalConfig().value)
-            console.log(this.$msalInstance);
+            this.$msalInstance.initialize()
         },
         methods: {
-            login() {
-                this.$msalInstance
-                .loginPopup({})
+            async login() {
+                await this.$msalInstance
+                .loginRedirect()
                 .then(() => {
                     const myAccounts = this.$msalInstance.getAllAccounts()
                     this.account = myAccounts [0]
